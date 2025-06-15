@@ -1,4 +1,4 @@
-﻿# Add Licensing
+﻿# Released under GPL-3.0 license
 $sharedDrives = gam user <your gmail address> show teamdrives name | ?{$_ -match "Shared Drive Name:"}
 $rootFolder = $PSScriptRoot + "GoogleSpecificToBU"
 FindGoForEach ($sharedDrive in $shareddrives) {

@@ -1,4 +1,4 @@
-﻿# Add Licensing
+﻿# Released under GPL-3.0 license
 $sharedDrives = gam show teamdrives name | ?{$_ -match "Shared Drive Name:"}
 $starred = "true"
 $sendnotification = 0

@@ -1,4 +1,4 @@
-# Add Licensing
+Released under GPL-3.0 license  
 <span style="color:green; font-weight:bold; font-size:36px;">Google Drive Local Backup</span>
 
 These are instructions for a local incremental backup of your Google Shared Drive Files on Windows.
@@ -97,7 +97,8 @@ Users will create new Shared Drives without notifying you. In order to be aware 
 + Run "CheckandAddSharedGDrive.ps1". The first run it will populate currentdrives.txt and send you emails of all the Shared Drives it has found. <span style="text-decoration:underline; color:red;">You will want to check this list against your current list to make sure your backup user is a manager of all of the drives.</span>
 + The next run will only send you notifications of any new drives not in currentdrives.txt.  You should add your backup user as a Manger to those drives.  
 
-<span>  </span>
+<span>  </span>  
+
 Now Findgooglefiles.ps1 will be able to backup all of your Shared Drive gdoc and gsheet files.  
 
 <span>  </span>
