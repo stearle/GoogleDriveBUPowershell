@@ -1,5 +1,5 @@
 These are instructions for a local incremental backup of your Google Drive Files.
-The include a backup system for Google specific files such as gdoc or gsheet written in powershell as most backup systems cannot download these files.  This process uses Duplicati, but any other incremental backup system should work as long as it can rotate full backups.  
+They include a backup system for Google specific files such as gdoc or gsheet written in powershell as most backup systems cannot download these files.  This process uses Duplicati, but any other incremental backup system should work as long as it can rotate full backups.  
   
   + Requirements:
     - A drive with enough free space to hold at least 7 incremental backups of your Google Drive Files
