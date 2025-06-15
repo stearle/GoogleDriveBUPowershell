@@ -1,4 +1,5 @@
-﻿$sharedDrives = gam show teamdrives name | ?{$_ -match "Shared Drive Name:"}
+﻿# Add Licensing
+$sharedDrives = gam show teamdrives name | ?{$_ -match "Shared Drive Name:"}
 $starred = "true"
 $sendnotification = 0
 $notificationmsg = ""

@@ -1,4 +1,5 @@
-﻿$sharedDrives = gam user <your gmail address> show teamdrives name | ?{$_ -match "Shared Drive Name:"}
+﻿# Add Licensing
+$sharedDrives = gam user <your gmail address> show teamdrives name | ?{$_ -match "Shared Drive Name:"}
 $rootFolder = $PSScriptRoot + "GoogleSpecificToBU"
 FindGoForEach ($sharedDrive in $shareddrives) {
     $sharedDrive = $sharedDrive -replace [regex]::Escape("Shared Drive Name:"), ""
