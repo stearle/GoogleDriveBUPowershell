@@ -22,19 +22,19 @@ ForEach ($sharedDrive in $shareddrives) {
 }
 if ($sendnotification -eq 1) {
      Write-Host $notificationmsg
-     $EmailFrom = "scott.tearle@gmail.com"
+     $EmailFrom = "<your gmail address>"
      # Powershell's emailer requires you to use an array of 
      # email addresses in the format of  John <user@example.com>
      # the <> must be included
      # if you do not then the email will fail
-     $EmailToAddresses = @("Scott Tearle <scott.tearle@gmail.com>") 
+     $EmailToAddresses = @("Your Name <your google email address.>") 
      $Subject = "New SJ Shared Drives need to be setup" 
      $Body = [Environment]::NewLine + $notificationmsg
      $SMTPServer = "smtp.gmail.com"
      $SMTPClient = New-Object Net.Mail.SmtpClient($SMTPServer, 587) 
      $SMTPClient.EnableSsl = $true 
      # Change the user name and password to that of your sending email account
-     $SMTPClient.Credentials = New-Object System.Net.NetworkCredential("scott.tearle@gmail.com", "jbbnxnsgvdmmlvuv"); 
+     $SMTPClient.Credentials = New-Object System.Net.NetworkCredential("<your Google email>", "<application password>"); 
      Foreach($EmailTo in $EmailToAddresses){
         $SMTPClient.Send($EmailFrom, $EmailTo, $Subject, $Body)
      }  

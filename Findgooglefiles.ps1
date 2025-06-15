@@ -1,10 +1,10 @@
-﻿$sharedDrives = gam user scott@sj-construction.ca show teamdrives name | ?{$_ -match "Shared Drive Name:"}
+﻿$sharedDrives = gam user <your gmail address> show teamdrives name | ?{$_ -match "Shared Drive Name:"}
 $rootFolder = $PSScriptRoot + "GoogleSpecificToBU"
-ForEach ($sharedDrive in $shareddrives) {
+FindGoForEach ($sharedDrive in $shareddrives) {
     $sharedDrive = $sharedDrive -replace [regex]::Escape("Shared Drive Name:"), ""
     $sharedDrive = $sharedDrive.Trim()
     Write-Host $sharedDrive
-    $googleFiles = gam user scott@sj-construction.ca print filelist select teamdrive $sharedDrive showmimetype "gdoc,gsheet,gpresentation,gdrawing,gform" showownedby any id title filepath
+    $googleFiles = gam user <your gmail address> print filelist select teamdrive $sharedDrive showmimetype "gdoc,gsheet,gpresentation,gdrawing,gform" showownedby any id title filepath
     $googleFileCount = 0
     $googleFileArr = @()
     ForEach ($googleFileString in $googleFiles) {
@@ -33,7 +33,7 @@ ForEach ($sharedDrive in $shareddrives) {
             If ($targetPathExists -eq $false) {
                 mkdir $targetDir
             }
-            gam user scott@sj-construction.ca get drivefile id $googleFileArr.id targetfolder $targetDir targetname $targetFilename overwrite true
+            gam user <your gmail address> get drivefile id $googleFileArr.id targetfolder $targetDir targetname $targetFilename overwrite true
         }
     }
     Write-Host "`r`n"
