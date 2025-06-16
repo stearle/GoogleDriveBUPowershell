@@ -1,14 +1,16 @@
 Released under GPL-3.0 license  
-<span style="color:green; font-weight:bold; font-size:36px;">Google Drive Local Backup</span>
+
+# $\textsf{\color{green}{Google Drive Local Backup}}$
 
 These are instructions for a local incremental backup of your Google Shared Drive Files on Windows.
 Some organizations want a "Belt and Suspenders" approach to Cloud Files. This can also protect against deletion of files by disgruntled employees. It can also simplify transitioning to another Cloud service.
 As most backup systems cannot download Google specific files such as gdoc or gsheet I have included a script written in powershell to handle this. This process uses Duplicati to handle the incremental backups and retention, but any other incremental backup system should work as long as it can rotate full backups.  
-<span style="color:red;">THIS CANNOT BACKUP ALL OF YOUR USERS "MyDrive" Files, only "Shared Drives"</span>  
+[!Warning]
+THIS CANNOT BACKUP ALL OF YOUR USERS "MyDrive" Files, only "Shared Drives"
 
 <span>  </span>
   
-<span style="color:green;">Requirements:</span>
+## $\textsf{\color{green}{Requirements:}}$
 - A Google Workspace user who has "Super Admin" rights, referred to hereafter as "backup user"
 - A drive with enough free space to hold at least 7 incremental backups of your Google Drive Files
 - Install GAM7 or higher 
@@ -26,7 +28,7 @@ As most backup systems cannot download Google specific files such as gdoc or gsh
 
 <span>  </span>
 
-<span style="color:green;">Instructions:</span>
+## $\textsf{\color{green}{Instructions:}}$
   + Create a directory on a drive where there is enough space to download the Google specific files.  i.e. your backup drive
   
   + Copy Findgooglefiles.ps1 to the directory you created and change any instance of
@@ -57,7 +59,7 @@ As most backup systems cannot download Google specific files such as gdoc or gsh
 You should now have a scheduled backup of your Google Shared Drive Files :)  
 <span>  </span>
 
-<span style="color:green;">New Shared Drives Notifications</span>  
+## $\textsf{\color{green}{New Shared Drives Notifications:}}$  
 Users will create new Shared Drives without notifying you. In order to be aware of these drives and make your backup user a Manager of new drives follow these instructions:
 + Activate 2 factor security in Google for your backup user and create an application password called GoogleDrives. Note or copy this password to a convenient location so you can use it later.
 + Copy "CheckandAddSharedGDrive.ps1" and "currentdrives.txt" to the same directory you created for the backups
