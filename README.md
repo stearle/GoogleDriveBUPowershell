@@ -1,6 +1,6 @@
 Released under GPL-3.0 license  
 
-# ${\color{green}{Google Drive Local Backup}$
+# $\color{green}{Google Drive Local Backup}$
 
 These are instructions for a local incremental backup of your Google Shared Drive Files on Windows.
 Some organizations want a "Belt and Suspenders" approach to Cloud Files. This can also protect against deletion of files by disgruntled employees. It can also simplify transitioning to another Cloud service.
