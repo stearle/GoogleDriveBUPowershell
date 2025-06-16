@@ -5,8 +5,8 @@ Released under GPL-3.0 license
 These are instructions for a local incremental backup of your Google Shared Drive Files on Windows.
 Some organizations want a "Belt and Suspenders" approach to Cloud Files. This can also protect against deletion of files by disgruntled employees. It can also simplify transitioning to another Cloud service.
 As most backup systems cannot download Google specific files such as gdoc or gsheet I have included a script written in powershell to handle this. This process uses Duplicati to handle the incremental backups and retention, but any other incremental backup system should work as long as it can rotate full backups.  
-[!Warning]
-THIS CANNOT BACKUP ALL OF YOUR USERS "MyDrive" Files, only "Shared Drives"
+
+$\textsf{\color{red}{THIS CANNOT BACKUP ALL OF YOUR USERS "MyDrive" Files, only "Shared Drives"}}$
   
 ## $\textsf{\color{green}{Requirements}}$
 - A Google Workspace user who has "Super Admin" rights, referred to hereafter as "backup user"
