@@ -84,7 +84,10 @@ Users will create new Shared Drives without notifying you. In order to be aware 
   ```
   Using your backup user's email address and the application password you created.  
   
-+ Run "CheckandAddSharedGDrive.ps1". The first run it will populate currentdrives.txt and send you emails of all the Shared Drives it has found. $\textsf{\color{red}{You will want to check this list against your current list to make sure your backup user is a manager of all of the drives.}}$
++ Run "CheckandAddSharedGDrive.ps1". The first run it will populate currentdrives.txt and send you emails of all the Shared Drives it has found. 
+
+  $\textsf{\color{red}{You will want to check this list against your current list.}}$
+  $\textsf{\color{red}{Make sure your backup user is a manager of all of the drives.}}$
 + The next run will only send you notifications of any new drives not in currentdrives.txt.  You should add your backup user as a Manger to those drives.  
 
 Now Findgooglefiles.ps1 will be able to backup all of your Shared Drive gdoc and gsheet files.  
