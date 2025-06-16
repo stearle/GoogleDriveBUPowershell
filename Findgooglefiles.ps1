@@ -5,7 +5,7 @@ FindGoForEach ($sharedDrive in $shareddrives) {
     $sharedDrive = $sharedDrive -replace [regex]::Escape("Shared Drive Name:"), ""
     $sharedDrive = $sharedDrive.Trim()
     Write-Host $sharedDrive
-    $googleFiles = gam user <your gmail address> print filelist select teamdrive $sharedDrive showmimetype "gdoc,gsheet,gpresentation,gdrawing,gform" showownedby any id title filepath
+    $googleFiles = gam user <your gmail address> print filelist select teamdrive $sharedDrive showmimetype "gdoc,gsheet,gslides,gpresentation,gdrawing,gform" showownedby any id title filepath
     $googleFileCount = 0
     $googleFileArr = @()
     ForEach ($googleFileString in $googleFiles) {
