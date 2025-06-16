@@ -8,7 +8,7 @@ As most backup systems cannot download Google specific files such as gdoc or gsh
 [!Warning]
 THIS CANNOT BACKUP ALL OF YOUR USERS "MyDrive" Files, only "Shared Drives"
   
-## $\textsf{\color{green}{Requirements:}}$
+## $\textsf{\color{green}{Requirements}}$
 - A Google Workspace user who has "Super Admin" rights, referred to hereafter as "backup user"
 - A drive with enough free space to hold at least 7 incremental backups of your Google Drive Files
 - Install GAM7 or higher 
@@ -24,7 +24,7 @@ THIS CANNOT BACKUP ALL OF YOUR USERS "MyDrive" Files, only "Shared Drives"
   * Make sure you change the service to run as the user you wish to carry out the backups as or the Google Drive letter won't show up as a source.
   * Create a backup for your Google Drive by selecting "Shared Drives" under your Google Drive letter as a source. Do not run yet.  
 
-## $\textsf{\color{green}{Instructions:}}$
+## $\textsf{\color{green}{Instructions}}$
   + Create a directory on a drive where there is enough space to download the Google specific files.  i.e. your backup drive
   
   + Copy Findgooglefiles.ps1 to the directory you created and change any instance of
@@ -51,7 +51,7 @@ THIS CANNOT BACKUP ALL OF YOUR USERS "MyDrive" Files, only "Shared Drives"
 
 You should now have a scheduled backup of your Google Shared Drive Files :)  
 
-## $\textsf{\color{green}{New Shared Drives Notifications:}}$  
+## $\textsf{\color{green}{New Shared Drives Notifications}}$  
 Users will create new Shared Drives without notifying you. In order to be aware of these drives and make your backup user a Manager of new drives follow these instructions:
 + Activate 2 factor security in Google for your backup user and create an application password called GoogleDrives. Note or copy this password to a convenient location so you can use it later.
 + Copy "CheckandAddSharedGDrive.ps1" and "currentdrives.txt" to the same directory you created for the backups
